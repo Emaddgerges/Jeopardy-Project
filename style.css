@@ -76,9 +76,7 @@
       height: 50px;  
       font-size: 1.1em;
       border-radius: 15px;
-      background-color: #0912b2;
-
-      
+      background-color: #0912b2; 
   }
   #score {
       font-size: 1.2em;
@@ -92,3 +90,86 @@
       padding: 10px;
       border-radius: 10px;
   }
+
+  @media (max-width: 700px)  {
+ 
+       #question-area {
+      width: 80%;
+      height: 40%;
+      
+      border-radius: 10px;
+      border: 1px solid black;
+      background-color: bisque;
+      text-align: center;
+      font-size: 3em;
+      padding: 20px;
+  }
+      #answer-input {
+      padding: 10px;
+      font-size: 1em;
+      width: 80%;
+      margin-top: 20px;
+  }
+     button {
+      padding: 10px 20px;
+      font-size: 1em;
+      border-radius: 5px;
+      border: none;
+      background-color: #115ff4;
+      color: white;
+      cursor: pointer;
+      margin: 20px;
+  }
+     #score {
+      font-size: 2em;
+      align-self: center;
+      text-align: left;
+      background-color: coral;
+      position: relative;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: -20px;
+      
+  }
+      #start-btn{
+      width: 250px;
+      height: 75px;  
+      font-size: 2em;
+      border-radius: 15px;
+      background-color: #0912b2; 
+      margin-bottom: 40px;
+  }
+         #title{
+      text-align: center;
+      font-size: 2em;
+      margin-top: 20px;
+      color: #122385;
+  }
+     #jeopardy-board {
+      max-width: 100%;
+      min-height: 100%;
+      margin: 10px auto;
+      text-align: center;
+      margin-top: 30px;
+  }
+     th, td {
+      border: 5px solid rgba(251, 183, 24, 0.853);
+      border-radius: 20px;
+      padding: 10px;
+      margin: 10px;
+      max-width: 300px;
+      min-height: 150px;
+      cursor: pointer;
+      background-color: #16163e;
+      color: white;
+      font-size: 2em;
+      align-self: center;
+  }
+
+   
+    #all{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+  } 

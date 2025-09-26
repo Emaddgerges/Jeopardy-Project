@@ -6,7 +6,7 @@
          
           
           const selectedCats = categories.filter(cat => {
-              if (cat.id === 11 || cat.id === 15 || cat.id === 9 || cat.id === 10) {
+              if (cat.id === 11 || cat.id === 15 || cat.id === 9 || cat.id === 10 || cat.id === 4) {
                   return false; // Skip if category title is undefined
               }
               return true;
@@ -86,6 +86,7 @@
 
       // Mark cell as answered
       td.classList.add('answered');
+       console.log(currentClue);
       
   }
 
@@ -93,14 +94,16 @@
 
    document.getElementById('submit-answer').addEventListener('click', () => {
       const userAnswer = document.getElementById('answer-input').value.trim().toLowerCase();
-      const correctAnswer = currentClue.answer.toLowerCase();
+      const correctAnswer = currentClue.answer      // Remove HTML tags
+    .toLowerCase()
+    
       
       if (userAnswer === correctAnswer) {
           score += currentClue.value;
           alert('Correct!');
       } else {
           score -= currentClue.value;
-          alert(`Incorrect. The answer was: ${currentClue.answer}`);
+          alert(`Oh No Incorrect (";") The answer was: ${currentClue.answer}`);
       }
 
       document.getElementById('score').textContent = `Score: ${score}`;
@@ -131,3 +134,4 @@
     createGameBoard(gameData);
     // isStartGameClicked = true;
   });
+
